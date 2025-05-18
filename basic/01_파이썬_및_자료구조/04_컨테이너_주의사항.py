@@ -28,3 +28,20 @@ b = copy(a)  # 복제 3
 b[0] = 4
 print(a)
 print(b)
+
+## 3-3. 깊은 복사, 모든 값이 객체이기 때문
+a = [[1, 2, 3], [4, 5, 6]]
+b = a[:]
+
+b[0][0] = 9
+print(a)
+print(b)
+
+from copy import deepcopy
+
+a = [[1, 2, 3], [4, 5, 6]]
+b = deepcopy(a)
+
+b[0][0] = 9
+print(a)
+print(b)
