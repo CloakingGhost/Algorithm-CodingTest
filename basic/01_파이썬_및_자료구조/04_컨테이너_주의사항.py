@@ -16,3 +16,15 @@ print(b)
 b[0] = 4
 print(a)
 print(b)
+
+## 3-2. 얕은 복사
+from copy import copy
+
+a = [1, 2, 3]
+b = a[:]  # 복제 1
+b = list(a)  # 복제 2
+b = copy(a)  # 복제 3
+
+b[0] = 4
+print(a)
+print(b)
