@@ -21,6 +21,7 @@ for tc in range(T):
                 sets = set(sudoku[i + k][j + l] for k in range(3) for l in range(3))
                 if len(sets) != 9:
                     flag = False
+                    break
             if not flag:
                 break
 
