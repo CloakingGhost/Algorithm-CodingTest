@@ -1,4 +1,4 @@
-# https://www.notion.so/1d1611ac3a0080c19460e741c49f4cdf?p=1de611ac3a00803a97f9db1264541a7c&pm=s
+# https://www.acmicpc.net/problem/3190
 import sys
 from collections import deque
 
