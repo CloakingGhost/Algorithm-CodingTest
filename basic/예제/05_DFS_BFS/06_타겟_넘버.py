@@ -4,6 +4,11 @@
 # region
 
 =======
+<<<<<<< HEAD
+# region
+
+=======
+>>>>>>> main
 >>>>>>> main
 
 def solution(numbers, target):
@@ -23,6 +28,9 @@ def solution(numbers, target):
 
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> main
 # endregion
 
 
@@ -60,7 +68,10 @@ def solution(numbers, target):
     return answer
 
 
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> main
 >>>>>>> main
 print(solution([1, 1, 1, 1, 1], 3))
 # print(solution([4, 1, 2, 1], 4))
