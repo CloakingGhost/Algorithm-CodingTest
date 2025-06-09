@@ -1,7 +1,10 @@
 # https://school.programmers.co.kr/learn/courses/30/lessons/43165
 
+<<<<<<< HEAD
 # region
 
+=======
+>>>>>>> main
 
 def solution(numbers, target):
     def dfs(depth, total):
@@ -19,6 +22,7 @@ def solution(numbers, target):
     return answer
 
 
+<<<<<<< HEAD
 # endregion
 
 
@@ -56,5 +60,7 @@ def solution(numbers, target):
     return answer
 
 
+=======
+>>>>>>> main
 print(solution([1, 1, 1, 1, 1], 3))
 # print(solution([4, 1, 2, 1], 4))
