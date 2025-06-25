@@ -11,3 +11,46 @@
 2. 잇고나서 사이클 판별                         -> 유니온-파인드
 3. 사이클이 없으면 그냥 두고, 있으면 잇지 않음  -> E = V - 1
 """
+
+
+def solution(n, edges):
+
+    def find(x):
+        if x != parent[x]:
+            parent[x] = find(parent[x])
+        return parent[x]
+
+    def union(x, y):
+        x_root = find(x)
+        y_root = find(y)
+
+        # 사이클 존재
+        if x_root == y_root:
+            return False
+
+        if rank[x_root] > rank[y_root]:
+            x_root, y_root = y_root, x_root
+
+        parent[x_root] = y_root
+        if rank[x_root] == rank[y_root]:
+            rank[y_root] += 1
+
+        return True
+
+    parent = list(range(n + 1))
+    rank = [0] * (n + 1)
+    # 1. 가중치에 따라 간선을 오름차순으로 정렬
+    edges.sort(key=lambda x: x[-1])
+
+    total = 0  # 비용의 총합
+    count = 0  # 간선의 개수
+    # 2. 가장 적은 비용의 간선부터 차례로 선택
+    for x, y, w in edges:
+        if union(x, y):  # 사이클이 없으면
+            total += w
+            count += 1
+
+            if count == n - 1:
+                break
+
+    return total
